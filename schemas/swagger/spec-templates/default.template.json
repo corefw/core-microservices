@@ -1,0 +1,33 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": {
+			"$ref": "service:Package#/version"
+		},
+		"title": {
+			"$ref": "service:Package#/name"
+		},
+		"description": "Part of the C2C API.",
+		"termsOfService": "",
+		"contact": {
+			"$ref": "service:Package#/author"
+		},
+		"license": {
+			"name": "EULA"
+		}
+	},
+	"host": "api.c2cs.io",
+	"basePath": "/",
+	"schemes": [
+		"http"
+	],
+	"consumes": [
+		"application/vnd.api+json"
+	],
+	"produces": [
+		"application/vnd.api+json"
+	],
+	"paths": {
+		"$ref": "service:EndpointPaths"
+	}
+}

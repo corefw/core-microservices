@@ -1,0 +1,28 @@
+{
+	"endpointResponse": {
+		"headers": {
+			"X-Series-Id": "integration.response.body.meta.seriesUUID"
+		},
+		"template": "$input.path('$.errorMessage')",
+		"statusCodes": {
+			"200": {
+				"template": "$input.body"
+			},
+			"400": {
+				"pattern": ".*\\\"code\\\":\\\"400\\\".*"
+			},
+			"401": {
+				"pattern": ".*\\\"code\\\":\\\"401\\\".*"
+			},
+			"403": {
+				"pattern": ".*\\\"code\\\":\\\"403\\\".*"
+			},
+			"404": {
+				"pattern": ".*\\\"code\\\":\\\"404\\\".*"
+			},
+			"500": {
+				"pattern": ".*\\\"code\\\":\\\"500\\\".*"
+			}
+		}
+	}
+}

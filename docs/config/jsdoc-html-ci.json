@@ -1,0 +1,16 @@
+{
+	"source": {
+		"include": [
+			"lib",
+			"package.json",
+			"README.md"
+		],
+		"includePattern": ".js$",
+		"excludePattern": "(node_modules/|docs|depr.|_depr/)"
+	},
+	"opts": {},
+	"plugins": [
+		"plugins/markdown",
+		"../@lukechavers/jsdoc/plugins/aka/aka.js"
+	]
+}

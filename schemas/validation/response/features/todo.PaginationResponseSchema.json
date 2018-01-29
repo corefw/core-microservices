@@ -1,0 +1,354 @@
+{
+	"id": "universalEndpointResponse",
+	"description": "Success Response",
+	"type": "object",
+	"properties": {
+		"jsonapi": {
+			"title": "JSONAPIVersion",
+			"type": "object",
+			"required": [
+				"version"
+			],
+			"properties": {
+				"version": {
+					"type": "string"
+				}
+			}
+		},
+		"meta": {
+			"title": "MetaData",
+			"type": "object",
+			"required": [
+				"requestId",
+				"seriesId",
+				"operationId",
+				"stage",
+				"service",
+				"pagination"
+			],
+			"properties": {
+				"requestId": {
+					"type": "string",
+					"format": "uuid",
+					"description": "Current Request ID (UUID)"
+				},
+				"seriesId": {
+					"type": "string",
+					"format": "uuid",
+					"description": "Current Request Chain ID (UUID)"
+				},
+				"operationId": {
+					"type": "string",
+					"description": "The internal name of the API endpoint that generated this response."
+				},
+				"stage": {
+					"type": "string",
+					"description": "The API environment name."
+				},
+				"service": {
+					"title": "ServiceInformationMeta",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string",
+							"description": "The service to which this API endpoint belongs."
+						},
+						"version": {
+							"type": "string",
+							"description": "The current version of the service and endpoint source code."
+						}
+					}
+				},
+				"pagination": {
+					"title": "PaginationMeta",
+					"type": "object",
+					"properties": {
+						"allRecordsReturned": {
+							"type": "boolean",
+							"description": "Whether or not ALL available records, based on the request parameters provided, were returned in the result data. This will be true if the page size (`pageSize`) is larger than the total number of records available (`totalRecords`)."
+						},
+						"currentPage": {
+							"type": "integer",
+							"description": "The page number that was returned (the first page is number 1)."
+						},
+						"pageSize": {
+							"type": "integer",
+							"description": "The number of records returned for each page."
+						},
+						"totalPages": {
+							"type": "integer",
+							"description": "The total number of pages available based on the request parameters provided."
+						},
+						"recordsReturned": {
+							"type": "integer",
+							"description": "The number of records returned in the result data; this will always be the same as 'pageSize' on all pages except the last, which might include fewer records."
+						},
+						"firstRecordIndex": {
+							"type": "integer",
+							"description": "The zero-based index of the first record returned in the result data."
+						},
+						"lastRecordIndex": {
+							"type": "integer",
+							"description": "The zero-based index of the last record returned in the result data."
+						},
+						"totalRecords": {
+							"type": "integer",
+							"description": "The total number of records available based on the request parameters provided."
+						}
+					}
+				}
+			}
+		},
+		"data": {
+			"title": "ActivityCollection",
+			"type": "array",
+			"description": "A collection of zero or more Activity record results",
+			"items": {
+				"title": "ActivityRecord",
+				"type": "object",
+				"description": "Describes a single Activity record",
+				"properties": {
+					"id": {
+						"type": "string",
+						"format": "uuid"
+					},
+					"type": {
+						"type": "string",
+						"enum": [
+							"Activity"
+						]
+					},
+					"attributes": {
+						"title": "ActivityAttributes",
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "The name of the activity represented by the Activity record."
+							},
+							"hasJerseyNumbers": {
+								"type": "boolean",
+								"description": "Indicates whether or not participants in this activity have numbers listed on their jersey or uniform."
+							},
+							"allowMatches": {
+								"type": "boolean",
+								"description": "Indicates whether or not the system allows matches to be created for this activity."
+							},
+							"allowTournaments": {
+								"type": "boolean",
+								"description": "Indicates whether or not the system allows tournaments to be created for this activity."
+							},
+							"scoring": {
+								"type": "object",
+								"title": "ActivityScoringAttributes",
+								"description": "Contains attributes that collectively define how competitions are scored within the activity.",
+								"properties": {
+									"defaultMethod": {
+										"description": "Defines the type of scoring that this activity uses by default. Depending on the context, however, this may be overridden by specific mechanisms.",
+										"type": "string",
+										"enum": [
+											"standard",
+											"best_of_3",
+											"best_of_5",
+											"best_of_7",
+											"best_of_9"
+										],
+										"default": "standard"
+									},
+									"isReversed": {
+										"description": "Indicates whether or not scoring is reversed for this activity. When FALSE (default) a higher score is considered to be better in competition. When TRUE, a lower number is considered to be better in competition.",
+										"type": "boolean",
+										"default": false
+									}
+								}
+							},
+							"terms": {
+								"type": "object",
+								"title": "ActivityTermMappings",
+								"description": "Contains attributes that provide the fundamental terminology used within the activity.",
+								"properties": {
+									"match": {
+										"description": "Indicates the term used to refer to matches (individual competitions, usually between exactly two teams or players) within the activity.",
+										"type": "string",
+										"default": "Game"
+									},
+									"tournament": {
+										"description": "Indicates the term used to refer to tournaments (events that usually contain multiple matches or events) with the",
+										"type": "string",
+										"default": "Tournament"
+									},
+									"points": {
+										"description": "Indicates the term used to define the unit that is used to calculate the winner of a match within the activity.",
+										"type": "string",
+										"default": "Points"
+									},
+									"period": {
+										"description": "Indicates the term used to refer to a significant, standard, sub-part of a match.",
+										"type": "string",
+										"default": "Quarter"
+									},
+									"regulation": {
+										"description": "Indicates the term used to refer to the main play period of a match, which usually includes a fixed number of mandatory periods.",
+										"type": "string",
+										"default": "Regulation"
+									},
+									"overtime": {
+										"description": "Indicates the term used to refer to the non-typical play period of a match, which usually only occurs because the teams were tied at the end of regulation.",
+										"type": "string",
+										"default": "Overtime"
+									},
+									"final": {
+										"description": "Indicates the term used to refer to final score of a match within the activity.",
+										"type": "string",
+										"default": "Final"
+									}
+								}
+							}
+						}
+					},
+					"meta": {
+						"title": "ActivityMeta",
+						"type": "object",
+						"properties": {
+							"createdDateTime": {
+								"type": "string",
+								"format": "date-time"
+							},
+							"updatedDateTime": {
+								"type": "string",
+								"format": "date-time"
+							}
+						}
+					},
+					"relationships": {
+						"title": "ActivityRelationships",
+						"type": "object",
+						"properties": {
+							"createdBy": {
+								"type": "object",
+								"properties": {
+									"data": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"format": "uuid"
+											},
+											"type": {
+												"type": "string",
+												"enum": [
+													"User"
+												]
+											}
+										}
+									}
+								}
+							},
+							"updatedBy": {
+								"type": "object",
+								"properties": {
+									"data": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"format": "uuid"
+											},
+											"type": {
+												"type": "string",
+												"enum": [
+													"User"
+												]
+											}
+										}
+									}
+								}
+							},
+							"category": {
+								"type": "object",
+								"properties": {
+									"data": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"format": "uuid"
+											},
+											"type": {
+												"type": "string",
+												"enum": [
+													"ActivityCategory"
+												]
+											}
+										}
+									}
+								}
+							},
+							"type": {
+								"type": "object",
+								"properties": {
+									"data": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"format": "uuid"
+											},
+											"type": {
+												"type": "string",
+												"enum": [
+													"ActivityType"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"CommonResponse": {
+			"type": "object",
+			"required": [
+				"meta",
+				"jsonapi"
+			],
+			"properties": {
+				"jsonapi": {
+					"type": "object",
+					"title": "JSONAPIVersion",
+					"required": [
+						"version"
+					],
+					"properties": {
+						"version": {
+							"type": "string"
+						}
+					}
+				},
+				"meta": {
+					"type": "object",
+					"title": "MetaData",
+					"required": [
+						"requestId",
+						"seriesId"
+					],
+					"properties": {
+						"requestId": {
+							"type": "string",
+							"description": "unique UUID of current request"
+						},
+						"seriesId": {
+							"type": "string",
+							"description": "persistend UUID of initial request for all calls chain"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+jsdoc2md
+mock
+tests
+.gitignore
+.travis.yml
+yarn.lock
+depr.*
+docs/

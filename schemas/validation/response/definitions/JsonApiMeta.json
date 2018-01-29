@@ -1,0 +1,13 @@
+{
+	"title": "JsonApiMeta",
+	"type": "object",
+	"required": [
+		"version"
+	],
+	"properties": {
+		"version": {
+			"type": "string",
+			"pattern": "^1\\.0$"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"plugins": [
+		"serverless-offline"
+	],
+	"//plugins": [
+		"@c2cs/serverless-apigateway-plugin",
+		"@c2cs/serverless-subscription-plugin"
+	]
+}

@@ -1,0 +1,308 @@
+{
+	"env": {
+		"browser": false,
+		"node": true,
+		"es6": true
+	},
+	"plugins": [
+		"c2c",
+		"jsdoc"
+	],
+	"rules": {
+		"strict": [
+			"error",
+			"global"
+		],
+		"comma-dangle": [
+			"error",
+			"always-multiline"
+		],
+		"no-cond-assign": "error",
+		"no-console": "error",
+		"no-constant-condition": "error",
+		"no-control-regex": "error",
+		"no-debugger": "error",
+		"no-dupe-args": "error",
+		"no-dupe-keys": "error",
+		"no-duplicate-case": "error",
+		"no-empty-character-class": "error",
+		"no-empty": "off",
+		"no-ex-assign": "error",
+		"no-extra-boolean-cast": "error",
+		"no-extra-parens": "error",
+		"no-extra-semi": "error",
+		"no-func-assign": "error",
+		"no-inner-declarations": "error",
+		"no-invalid-regexp": "error",
+		"no-irregular-whitespace": "error",
+		"no-negated-in-lhs": "error",
+		"no-obj-calls": "error",
+		"no-regex-spaces": "error",
+		"no-sparse-arrays": "error",
+		"no-unreachable": "error",
+		"use-isnan": "error",
+		"valid-jsdoc": [
+			"error",
+			{
+				"prefer": {
+					"fileoverview": "file",
+					"inheritdoc": "inheritDoc",
+					"var": "member",
+					"return": "returns",
+					"arg": "param",
+					"memberof": "memberOf"
+				},
+				"preferType": {
+					"object": "Object",
+					"array": "Array",
+					"date": "Date",
+					"regexp": "RegExp"
+				}
+			}
+		],
+		"valid-typeof": "error",
+		"accessor-pairs": "error",
+		"block-scoped-var": "error",
+		"complexity": "error",
+		"consistent-return": "error",
+		"curly": "error",
+		"default-case": "error",
+		"dot-notation": "error",
+		"dot-location": [
+			"error",
+			"property"
+		],
+		"eqeqeq": [
+			"error",
+			"smart"
+		],
+		"guard-for-in": "error",
+		"no-alert": "error",
+		"no-caller": "error",
+		"no-div-regex": "error",
+		"no-else-return": "error",
+		"no-eq-null": "error",
+		"no-eval": "error",
+		"no-extend-native": "error",
+		"no-extra-bind": "error",
+		"no-fallthrough": "error",
+		"no-floating-decimal": "error",
+		"no-implicit-coercion": "error",
+		"no-implied-eval": "error",
+		"no-invalid-this": "error",
+		"no-iterator": "error",
+		"no-labels": "error",
+		"no-lone-blocks": "error",
+		"no-loop-func": "error",
+		"no-multi-spaces": "error",
+		"no-multi-str": "error",
+		"no-native-reassign": "error",
+		"no-new-func": "error",
+		"no-new-wrappers": "error",
+		"no-new": "error",
+		"no-octal-escape": "error",
+		"no-octal": "error",
+		"no-param-reassign": "off",
+		"no-process-env": [
+			"off"
+		],
+		"no-proto": "error",
+		"no-redeclare": "error",
+		"no-return-assign": "error",
+		"no-script-url": "error",
+		"no-self-compare": "error",
+		"no-sequences": "error",
+		"no-throw-literal": "error",
+		"no-unused-expressions": [
+			"off"
+		],
+		"no-useless-call": "error",
+		"no-useless-concat": "error",
+		"no-void": "error",
+		"no-warning-comments": "off",
+		"no-with": "error",
+		"radix": "error",
+		"vars-on-top": "error",
+		"wrap-iife": "error",
+		"yoda": "error",
+		"no-unexpected-multiline": "error",
+		"no-unused-vars": "error",
+		"no-use-before-define": [
+			"error",
+			"nofunc"
+		],
+		"no-undef": [
+			"error"
+		],
+		"no-delete-var": "error",
+		"array-bracket-spacing": [
+			"error",
+			"always"
+		],
+		"block-spacing": "error",
+		"brace-style": "error",
+		"camelcase": "error",
+		"comma-spacing": "error",
+		"comma-style": "error",
+		"computed-property-spacing": [
+			"error",
+			"always"
+		],
+		"consistent-this": [
+			"error",
+			"me"
+		],
+		"eol-last": "error",
+		//		"func-names": "error",
+		"func-style": [
+			"error",
+			"declaration",
+			{
+				"allowArrowFunctions": false
+			}
+		],
+		"id-match": "error",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"jsx-quotes": "error",
+		"key-spacing": [
+			"error",
+			{
+				"multiLine": {
+					"beforeColon": false,
+					"afterColon": true
+				},
+				"align": {
+					"beforeColon": true,
+					"afterColon": true,
+					"on": "colon"
+				}
+			}
+		],
+		"lines-around-comment": [
+			"error",
+			{
+				"beforeBlockComment": true,
+				"beforeLineComment": false
+			}
+		],
+		"linebreak-style": "error",
+		"max-nested-callbacks": "error",
+		"new-cap": [
+			"error",
+			{
+				"capIsNewExceptionPattern": "^[A-Z0-9]+$"
+			}
+		],
+		"new-parens": "error",
+		"newline-after-var": [
+			"error",
+			"always"
+		],
+		"no-array-constructor": "error",
+		"no-continue": "error",
+		"no-inline-comments": "off",
+		"no-lonely-if": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 1
+			}
+		],
+		"no-empty-function": "error",
+		"no-nested-ternary": "error",
+		"no-new-object": "error",
+		"no-restricted-syntax": "error",
+		"no-spaced-func": "error",
+		"no-trailing-spaces": "error",
+		"no-underscore-dangle": "off",
+		"no-unneeded-ternary": "error",
+		"object-curly-spacing": "error",
+		"one-var": [
+			"error",
+			"never"
+		],
+		"operator-assignment": "error",
+		"operator-linebreak": "error",
+		"quotes": [
+			"error",
+			"double"
+		],
+		"require-jsdoc": "error",
+		"semi-spacing": "error",
+		"semi": "error",
+		//		"sort-vars": "error",
+		"keyword-spacing": [
+			"error",
+			{
+				"before": true,
+				"after": true
+			}
+		],
+		"space-before-blocks": "error",
+		"space-before-function-paren": [
+			"error",
+			{
+				"named": "never",
+				"anonymous": "always"
+			}
+		],
+		"space-in-parens": [
+			"error",
+			"always",
+			{
+				"exceptions": [ "empty" ]
+			}
+		],
+		"space-infix-ops": "error",
+		"space-unary-ops": "error",
+		"spaced-comment": [
+			"warn"
+		],
+		"wrap-regex": "error",
+		"max-len": [
+			"error",
+			120,
+			4,
+			{
+				"ignoreComments": true,
+				"ignoreStrings": true,
+				"ignoreUrls": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreRegExpLiterals": true
+			}
+		],
+		"padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": "return"
+			}
+		],
+		"c2c/block-padding": "error",
+		"c2c/no-arrow-functions": "error",
+		"c2c/use-strict-padding": "error",
+		"jsdoc/require-hyphen-before-param-description": [
+			"error",
+			"always"
+		]
+	},
+	"globals": {
+		"tipe": false,
+		"promise": false,
+		"expect": false,
+		"g": true,
+		"describe": false,
+		"beforeEach": false,
+		"before": false,
+		"afterEach": false,
+		"it": false
+	}
+}

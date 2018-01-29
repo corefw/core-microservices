@@ -1,0 +1,10 @@
+{
+	"path"        : "Activities",
+	"method"      : "${httpMethodLC}",
+	"integration" : "lambda-proxy",
+	"request"     : {
+		"parameters" : "${endpointParameterTemplate}",
+		"template"   : "${endpointRequestTemplate}"
+	},
+	"response"    : "${endpointResponse}"
+}

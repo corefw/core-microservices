@@ -1,0 +1,39 @@
+{
+	"type": "object",
+	"required": [
+		"meta",
+		"jsonapi"
+	],
+	"properties": {
+		"jsonapi": {
+			"type": "object",
+			"title": "JSONAPIVersion",
+			"required": [
+				"version"
+			],
+			"properties": {
+				"version": {
+					"type": "string"
+				}
+			}
+		},
+		"meta": {
+			"type": "object",
+			"title": "MetaData",
+			"required": [
+				"requestId",
+				"seriesId"
+			],
+			"properties": {
+				"requestId": {
+					"type": "string",
+					"description": "unique UUID of current request"
+				},
+				"seriesId": {
+					"type": "string",
+					"description": "persisted UUID of initial request for all calls chain"
+				}
+			}
+		}
+	}
+}

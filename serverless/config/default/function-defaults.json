@@ -1,0 +1,6 @@
+{
+	"handler"    : "${endpointRoot}/${endpointName}.execute",
+	"timeout"    : 20,
+	"memorySize" : 256,
+	"events"     : []
+}

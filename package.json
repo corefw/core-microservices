@@ -1,0 +1,45 @@
+{
+  "name": "@corefw/core-microservices",
+  "version": "5.0.0",
+  "description": "Classes and utilities related to microservice endpoints.",
+  "author": "Theodor Shaytanov <brainenjii@gmail.com>",
+  "contributors": [
+    "Luke Chavers <luke@c2cschools.com>",
+    "Kevin Sanders <kevin@c2cschools.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corefw/core-microservices.git"
+  },
+  "bugs": {
+    "url": "https://github.com/corefw/core-microservices/issues"
+  },
+  "homepage": "https://github.com/corefw/core-microservices#readme",
+  "main": "index.js",
+  "dependencies": {
+    "@corefw/core-common": "^5.0.0",
+    "requireindex": "^1.1.0"
+  },
+  "devDependencies": {
+    "jsdoc": "3.4.0",
+    "@lukechavers/jsdoc": "^0.1.7",
+    "json-schema-ref-parser": "^4.0.4"
+  },
+  "//scripts": {
+    "ci:docs": "./scripts/build-docs-ci.sh",
+    "docs": "./scripts/build-docs-local.sh",
+    "depr-docwatch": "./scripts/watch-and-build-docs.sh",
+    "depr-docswait": "./scripts/build-docs-then-wait.sh",
+    "docw:delete": "./scripts/pm2/doc-watcher/delete.sh",
+    "docw:monitor": "./scripts/pm2/doc-watcher/monitor.sh",
+    "docw:reload": "./scripts/pm2/doc-watcher/reload.sh",
+    "docw:restart": "./scripts/pm2/doc-watcher/restart.sh",
+    "docw:start": "./scripts/pm2/doc-watcher/start.sh",
+    "docw:status": "./scripts/pm2/doc-watcher/status.sh",
+    "docw:stop": "./scripts/pm2/doc-watcher/stop.sh"
+  },
+  "//devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.2.0"
+  }
+}

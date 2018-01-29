@@ -1,0 +1,10 @@
+{
+	"custom" : {
+		"stage": "${self:provider.stage}",
+		"subscription-pattern-default": "*",
+		"subscription-target-default": "arn:aws:kinesis:us-east-1:277549955817:stream/CloudWatchLogsToSqs01",
+		"subscription-target-type": "direct",
+		"subscription-source-default": "all",
+		"subscription-default-role": "arn:aws:iam::277549955817:role/CWLtoKinesisRole"
+	}
+}

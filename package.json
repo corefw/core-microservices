@@ -1,5 +1,5 @@
 {
-  "name": "@corefw/core-microservices",
+  "name": "@corefw/microservices",
   "version": "5.0.0",
   "description": "Classes and utilities related to microservice endpoints.",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
@@ -17,8 +17,13 @@
   "homepage": "https://github.com/corefw/core-microservices#readme",
   "main": "index.js",
   "dependencies": {
-    "@corefw/core-common": "^5.0.0",
-    "requireindex": "^1.1.0"
+    "@corefw/common": "^5.0.0",
+    "requireindex": "^1.1.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.2.0",
+    "eyes": "^0.1.8",
+    "tipe": "^0.1.12",
+    "bluebird": "^3.4.6"
   },
   "devDependencies": {
     "jsdoc": "3.4.0",
@@ -37,9 +42,5 @@
     "docw:start": "./scripts/pm2/doc-watcher/start.sh",
     "docw:status": "./scripts/pm2/doc-watcher/status.sh",
     "docw:stop": "./scripts/pm2/doc-watcher/stop.sh"
-  },
-  "//devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^3.2.0"
   }
 }

@@ -8,8 +8,8 @@ before_install:
 - chmod 0777 ./scripts -R
 - npm config set //registry.npmjs.org/:_authToken $NPM_API_KEY
 install:
-- yarn --version
-- yarn install --non-interactive
+#- yarn --version
+#- yarn install --non-interactive
 script:
 - npm run ci:docs
 deploy:

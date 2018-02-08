@@ -1,0 +1,38 @@
+language: node_js
+node_js:
+- '6'
+branches:
+  only:
+  - v5
+before_install:
+- chmod 0777 ./scripts -R
+- npm config set //registry.npmjs.org/:_authToken $NPM_API_KEY
+install:
+- yarn --version
+- yarn install --non-interactive
+script:
+- npm run ci:docs
+deploy:
+  - provider: npm
+    email: luke@c2cschools.com
+    skip_cleanup: true
+    api_key: $NPM_API_KEY
+    on:
+      all_branches: true
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: "developer.c2cs.io"
+    skip_cleanup: true
+    acl: public_read
+    default_text_charset: "utf-8"
+    region: "us-east-1"
+    upload-dir: "docs/source/core-microservices"
+    local_dir: "docs/html"
+    on:
+      all_branches: true
+env:
+  global:
+  - secure: TttY92CUW0m6yn2RPv2fpEMUQm0MYfGoeVYbV5qPCA08dIAQsvRb7y7zS9iQFKjP6pKUGPfCGCop3ugJYLFD56KufeWszCkCU9fXmtVd/f7W/d9IHMhs4HOwGLIDeSP1tphiOY298MxOSiqxxmQiJQeTgFTiJ/3uLUpL0aM0Ou1mVWz4yIW3a1d69nleSJCymbIWaySUnbmjc5Jx+drpI5KoBQ5UJznV6/U4/KoKxh7Yr2Se5E/wuB2pCmLa+buU6gsmBp51X8/p6kPcCy/4KMp6/CP7qBBignq3ZeauXwoVkhIm8dIYyHKvhFHLCnYVjMasLV/lQmsJMZkeAOOrmWHvBqfM/E0spQ75gkIr8mhj+sotXrcousCry3OJuQy+45FwZzz0QnYomiZws5npdWZ5WkklpgN2TXh6IBOicfsvHOpaKMrR8ivEoElElPblJEuZieewMotlcAwTHs8NKYNY8HWd5t2RRFtV4sRw7qFPDNmDDQcxCc5ql9Yphzza8GRMyVlw74Wu2sVohe/NCUjkGS8R6BDOW9oZtmGz3JfMuEi0XaavLryk5bagKEdoKaUrnc7SgTT4O9GOAkgqtir+OMWe3xlUwreJdsyGcqLIcCSvM0uFJlR+8X+/jo5N0O+Heu8zuECgd1p2CsyMLD0BzLaqL62CN/Fzfl8qNPk=
+  - secure: bkUBlj/8jPdrgMtTYeAJKvouvjjqximb8fbOhUdtGavxqtEJSbQxUhRW3TFtoBk4K9rxSdP+nI9XqxmEaTf42NyH2o5vdVaEPR/YcOkYSvoIcq4J4mnic4awfpNzz0dArFNkm21r360KZZNRmHnS1GIPCVVz85BSsxHL3BxeLlfzFBjblTFo5QrhNNJ6rFLNT0QB3MIi+FcV1mArvpHtAZrnKhM8Lz2DjXzg1TMI/M9mqzRMlJcPpLze5NE130xoC/37kE6MSaMlCz+UYqIvMQNQmlm2Jq7YwU6SJEvDdkxaZVhJ8uYX04N+42MM667w0Mx9Kb6uCGSFkN6K9gsNsUvqPX4eiMCbO6AkBpIiv8x3JYMNVBdaasUgC9dEu4cAOiVmCqwkNgnf/0z4tzoEw9XtFACOT4zMqSJNLzk8fS9ZCO6GTvY/k0JLtp6grcGg8lfbvJhcbNPLUECtYZXWx/cQZ4VaWB/YrB/gam0LxbTTXDWQmmlplB19/ECyC8/NrE3QDTHs4K3oW6fAWwFVenhJs2Mtsp9XGC8LEYixEeDboALT+kzKAoP3fj9MuQ7phr5YF+geLDKdSUZF6O8LFiJbTXBVNkdb9Lj8PTFzqaPzy5CXPKz1RuguI9Xe4m4/42CbVl39Zpm6hozM2/v03qrJychJVdDVBplzRxD2txg=
+  - secure: lLn1UXeo2NGaSrIFvQifm7baQ/FWVvuBc3zVgC+t7iPDRKDhpTfkbsSL5DTMfxleFIADXzLHFq6eLsO//d8bOC+usWhFbNsZn8TqIBFKL8knjWaI+4LdNBNktXMNtBRMffBBFm0Ys5XOPy6BR87fE5wCUJTPSQjzZztle8VFVZllZ0qiKE6YSk7kTzTPjz7oNIzkQGRO0zA2Wke05yVue5w616uFzC72Ra9FpxjbkyO0EyEbZESyyL7iAEUMHycf5XPAS6uDz1PFNwCAUEREyIzjOUsHOzul4Z5YCL0oalG2wrzM8QIU31pPpVLYRNpVP4EKIRVG94LX2j7s+HSecVNkr77tnGULy7eiHsaTDJ/ilAfD5NRXmY2fbMDxJySWPmX1Qgwti7yxG2Txlwzei0S364ajQm4A0mBqA6fN29Rm68znDTvfnv81N6mHHA1BtwfH6NZRRI7FtbYD5d0fBBx609Rd2uZWdXbOdiqCB9pVtVbdbj7xm4179A6aTLm+PZFQREryHDbCe/TpumXLvzvzfAtVdVvnpu8xqE20mVVO1GxLr4mc7l5FFnRnFOKXlU/hWS4NGi0DDzbQm9wFaW8FnCdxScmHX3HjIgjhYSkUnAfD8dXaF0kRDVuK45OjE1I0MpU4W4GvrOY+q/DGFp0dLF4KTqy5pIk3LIlK7ow=

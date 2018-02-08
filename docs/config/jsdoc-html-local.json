@@ -11,6 +11,7 @@
 	"opts": {},
 	"plugins": [
 		"plugins/markdown",
-		"../../plugins/aka/aka.js"
+		"../@lukechavers/jsdoc/plugins/aka/aka.js"
+		//		"plugins/markdown", "../../plugins/aka/aka.js"
 	]
 }

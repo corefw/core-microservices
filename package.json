@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Classes and utilities related to microservice endpoints.",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
   "contributors": [
@@ -33,9 +33,13 @@
     "@lukechavers/jsdoc": "^0.1.7",
     "json-schema-ref-parser": "^4.0.4"
   },
-  "//scripts": {
+  "scripts": {
     "ci:docs": "./scripts/build-docs-ci.sh",
     "docs": "./scripts/build-docs-local.sh",
+    "browser-sync": "./scripts/pm2/browser-sync/do-pm2-action.sh",
+    "build-docs": "./scripts/pm2/build-docs/do-pm2-action.sh"
+  },
+  "//scripts": {
     "depr-docwatch": "./scripts/watch-and-build-docs.sh",
     "depr-docswait": "./scripts/build-docs-then-wait.sh",
     "docw:delete": "./scripts/pm2/doc-watcher/delete.sh",
@@ -45,5 +49,7 @@
     "docw:start": "./scripts/pm2/doc-watcher/start.sh",
     "docw:status": "./scripts/pm2/doc-watcher/status.sh",
     "docw:stop": "./scripts/pm2/doc-watcher/stop.sh"
-  }
+  },
+  "//license": "SEE LICENSE IN LICENSE.md",
+  "//devDependencies": {}
 }

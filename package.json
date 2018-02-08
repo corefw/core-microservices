@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/corefw/core-microservices.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/corefw/core-microservices/issues"
   },

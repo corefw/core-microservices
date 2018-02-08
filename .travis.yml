@@ -3,7 +3,7 @@ node_js:
 - '6'
 branches:
   only:
-  - v5
+  - master
 before_install:
 - chmod 0777 ./scripts -R
 - npm config set //registry.npmjs.org/:_authToken $NPM_API_KEY

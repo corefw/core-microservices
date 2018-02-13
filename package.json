@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Classes and utilities related to microservice endpoints.",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
   "contributors": [
@@ -21,13 +21,13 @@
   "main": "index.js",
   "dependencies": {
     "@corefw/common": "^5.0.0",
-	"@c2cs/kms-crypt-config": "latest",
-    "requireindex": "^1.1.0",
+    "bluebird": "^3.4.6",
     "chai": "^4.1.2",
-    "mocha": "^3.2.0",
     "eyes": "^0.1.8",
-    "tipe": "^0.1.12",
-    "bluebird": "^3.4.6"
+    "mocha": "^3.2.0",
+    "require-from-string": "^2.0.1",
+    "requireindex": "^1.1.0",
+    "tipe": "^0.1.12"
   },
   "devDependencies": {
     "jsdoc": "3.4.0",

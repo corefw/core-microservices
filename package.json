@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.0.5",
+  "version": "5.0.6",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
@@ -26,19 +26,17 @@
     "chai": "^4.1.2",
     "eyes": "^0.1.8",
     "json-schema-ref-parser": "^4.0.4",
+    "mocha": "^3.2.0",
     "require-from-string": "^2.0.1",
     "requireindex": "^1.1.0",
     "tipe": "^0.1.12"
   },
-  "//dependencies": {
-  },
+  "//dependencies": {},
   "devDependencies": {
-    "jsdoc": "3.4.0",
     "@lukechavers/jsdoc": "^0.1.7",
-    "mocha": "^3.2.0"
+    "jsdoc": "3.4.0"
   },
-  "//devDependencies": {
-  },
+  "//devDependencies": {},
   "scripts": {
     "ci:docs": "./scripts/build-docs-ci.sh",
     "docs": "./scripts/build-docs-local.sh",

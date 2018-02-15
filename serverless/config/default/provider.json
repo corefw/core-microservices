@@ -4,14 +4,16 @@
 		"runtime"			: "nodejs6.10",
 		"stage"             : "${opt:stage,'dev'}",
 		"region"            : "us-east-1",
-		"environment"       : {
-			"SLS_DEFAULT_PROJECT" : "${self:service}",
+		"//environment": {
 			"MYSQL_HOST"          : "${env:MYSQL_HOST}",
 			"MYSQL_PORT"          : "${env:MYSQL_PORT}",
 			"MYSQL_USERNAME"      : "${env:MYSQL_USERNAME}",
 			"MYSQL_PASSWORD"      : "${env:MYSQL_PASSWORD}",
 			"REDIS_HOST"          : "${env:REDIS_HOST}",
-			"REDIS_PORT"          : "${env:REDIS_PORT}",
+			"REDIS_PORT"          : "${env:REDIS_PORT}"
+		},
+		"environment"       : {
+			"SLS_DEFAULT_PROJECT" : "${self:service}",
 			"SLS_DEFAULT_STAGE"   : "${opt:stage, 'dev'}"
 		},
 		"iamRoleStatements" : [

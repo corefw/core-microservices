@@ -3,8 +3,8 @@
 		"individually" : false,
 		"exclude"      : [
 			"node_modules/**",
-			"!node_modules/@c2cs/sls-tools/**",
-			"node_modules/@c2cs/sls-tools/node_modules/swagger-client/**",
+			"!node_modules/@corefw/microservices/**",
+			"!node_modules/@corefw/model/**",
 			"node-dependencies-*",
 			"scripts/**",
 			"test/**",

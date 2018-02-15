@@ -1,8 +1,9 @@
 {
 	"plugins": [
-		"serverless-offline"
 	],
 	"//plugins": [
+		"// fixme: if this is a dev dependency, can we really make it part of the global config for serverless?",
+		"serverless-offline",
 		"@c2cs/serverless-apigateway-plugin",
 		"@c2cs/serverless-subscription-plugin"
 	]

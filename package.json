@@ -1,8 +1,8 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.0.6",
+  "version": "5.0.7",
   "description": "Classes and utilities related to microservice endpoints.",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
   "contributors": [
     "Luke Chavers <luke@c2cschools.com>",
@@ -23,10 +23,8 @@
   "dependencies": {
     "@corefw/common": "^5.0.0",
     "bluebird": "^3.4.6",
-    "chai": "^4.1.2",
     "eyes": "^0.1.8",
     "json-schema-ref-parser": "^4.0.4",
-    "mocha": "^3.2.0",
     "require-from-string": "^2.0.1",
     "requireindex": "^1.1.0",
     "tipe": "^0.1.12"
@@ -34,18 +32,19 @@
   "//dependencies": {},
   "devDependencies": {
     "@lukechavers/jsdoc": "^0.1.7",
-    "jsdoc": "3.4.0"
+    "chai": "^4.1.2",
+    "jsdoc": "3.4.0",
+    "mocha": "^3.2.0"
   },
   "//devDependencies": {},
   "scripts": {
-    "ci:docs": "./scripts/build-docs-ci.sh",
-    "docs": "./scripts/build-docs-local.sh",
+    "ci:docs": "./scripts/docs/build-docs-ci.sh",
+    "docs": "./scripts/docs/build-docs-local.sh",
     "browser-sync": "./scripts/pm2/browser-sync/do-pm2-action.sh",
     "build-docs": "./scripts/pm2/build-docs/do-pm2-action.sh"
   },
   "//scripts": {
-    "depr-docwatch": "./scripts/watch-and-build-docs.sh",
-    "depr-docswait": "./scripts/build-docs-then-wait.sh",
+    "depr-docswait": "./scripts/docs/build-docs-then-wait.sh",
     "docw:delete": "./scripts/pm2/doc-watcher/delete.sh",
     "docw:monitor": "./scripts/pm2/doc-watcher/monitor.sh",
     "docw:reload": "./scripts/pm2/doc-watcher/reload.sh",

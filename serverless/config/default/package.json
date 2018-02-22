@@ -2,9 +2,7 @@
 	"package" : {
 		"individually" : false,
 		"exclude"      : [
-			"node_modules/**",
-			"!node_modules/@corefw/microservices/**",
-			"!node_modules/@corefw/model/**",
+			"swagger.spec.json",
 			"node-dependencies-*",
 			"scripts/**",
 			"test/**",
@@ -16,6 +14,7 @@
 			"testdata.json",
 			"typedefs.js",
 			".editorconfig",
+			".eslintignore",
 			".eslintrc",
 			".gitattributes",
 			"**/*.md",
@@ -25,6 +24,7 @@
 			"**/*.min.js",
 			"**/.travis.yml",
 			"**/LICENSE",
+			"**/LICENSE.md",
 			"**/bower.json",
 			"**/.npmignore",
 			"**/component.json",

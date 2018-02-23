@@ -3,8 +3,8 @@
 
 
 "@corefw/common@^5.0.0":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@corefw/common/-/common-5.0.6.tgz#9e3ddee4f2fb261dad4e140aa0e19c74f9b9ee41"
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/@corefw/common/-/common-5.0.9.tgz#ec730eca9327a6575f144d37e8738a3e51a9ce9d"
   dependencies:
     aws-sdk "^2.192.0"
     bluebird "^3.4.6"
@@ -53,8 +53,8 @@ ansicolors@~0.2.1:
   resolved "https://registry.yarnpkg.com/ansicolors/-/ansicolors-0.2.1.tgz#be089599097b74a5c9c4a84a0cdbcdb62bd87aef"
 
 argparse@^1.0.7:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   dependencies:
     sprintf-js "~1.0.2"
 
@@ -71,8 +71,8 @@ async@~1.4.0:
   resolved "https://registry.yarnpkg.com/async/-/async-1.4.2.tgz#6c9edcb11ced4f0dd2f2d40db0d49a109c088aab"
 
 aws-sdk@^2.192.0:
-  version "2.195.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.195.0.tgz#8feb922277455b7ddb608831ef4572b9097048cf"
+  version "2.201.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.201.0.tgz#7a4528262d9097abe37ebf4e6bf9d1851db47003"
   dependencies:
     buffer "4.9.1"
     events "^1.1.1"
@@ -89,8 +89,8 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
 base64-js@^1.0.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.1.tgz#a91947da1f4a516ea38e5b4ec0ec3773675e0886"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.3.tgz#fb13668233d9614cf5fb4bce95a9ba4096cdf801"
 
 base64url@2.0.0, base64url@^2.0.0:
   version "2.0.0"
@@ -282,8 +282,8 @@ generate-function@^2.0.0:
   resolved "https://registry.yarnpkg.com/generate-function/-/generate-function-2.0.0.tgz#6858fe7c0969b7d4e9093337647ac79f60dfbe74"
 
 generic-pool@^3.1.6:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/generic-pool/-/generic-pool-3.4.1.tgz#54103118d0cb279f77de7a0cc53396e6d0c12781"
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/generic-pool/-/generic-pool-3.4.2.tgz#92ff7196520d670839a67308092a12aadf2f6a59"
 
 get-func-name@^2.0.0:
   version "2.0.0"
@@ -521,8 +521,8 @@ lru-cache@^4.1.1:
     yallist "^2.1.2"
 
 marked@~0.3.4:
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.12.tgz#7cf25ff2252632f3fe2406bde258e94eee927519"
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.16.tgz#2f188b7dfcfa6540fe9940adaf0f3b791c9a5cba"
 
 minimatch@^3.0.2:
   version "3.0.4"

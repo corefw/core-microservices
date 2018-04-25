@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",

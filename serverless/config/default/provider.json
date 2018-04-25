@@ -1,46 +1,21 @@
 {
-	"provider" : {
-		"name"              : "aws",
-		"runtime"			: "nodejs6.10",
-		"stage"             : "${opt:stage,'dev'}",
-		"region"            : "us-east-1",
-		"//environment": {
-			"MYSQL_HOST"          : "${env:MYSQL_HOST}",
-			"MYSQL_PORT"          : "${env:MYSQL_PORT}",
-			"MYSQL_USERNAME"      : "${env:MYSQL_USERNAME}",
-			"MYSQL_PASSWORD"      : "${env:MYSQL_PASSWORD}",
-			"REDIS_HOST"          : "${env:REDIS_HOST}",
-			"REDIS_PORT"          : "${env:REDIS_PORT}"
+	"provider": {
+		"name": "aws",
+		"runtime": "nodejs6.10",
+		"stage": "${opt:stage,'dev'}",
+		"region": "us-east-1",
+		"environment": {
+			"SLS_DEFAULT_PROJECT": "${self:service}",
+			"SLS_DEFAULT_STAGE": "${opt:stage, 'dev'}"
 		},
-		"environment"       : {
-			"SLS_DEFAULT_PROJECT" : "${self:service}",
-			"SLS_DEFAULT_STAGE"   : "${opt:stage, 'dev'}"
-		},
-		"iamRoleStatements" : [
-			{
-				"Effect"   : "Allow",
-				"Resource" : "arn:aws:lambda:us-east-1:277549955817:function:*",
-				"Action"   : "lambda:InvokeFunction"
-			},
-			{
-				"Effect"   : "Allow",
-				"Resource" : "*",
-				"Action"   : [
-					"ec2:DescribeInstances",
-					"ec2:CreateNetworkInterface",
-					"ec2:DeleteNetworkInterface",
-					"ec2:AttachNetworkInterface",
-					"ec2:DescribeNetworkInterfaces",
-					"autoscaling:CompleteLifecycleAction"
-				]
-			}
-		],
-		"vpc"               : {
-			"securityGroupIds" : [
-				"sg-13c83b76"
+		"role": "arn:aws:iam::277549955817:role/c2c/tf/lambda/tf-role-lambda-default-exec",
+		"vpc": {
+			"securityGroupIds": [
+				"sg-a9a29ade"
 			],
-			"subnetIds"        : [
-				"subnet-7529092d"
+			"subnetIds": [
+				"subnet-d72c788a",
+				"subnet-335c086e"
 			]
 		}
 	}

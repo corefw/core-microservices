@@ -1,7 +1,7 @@
 {
-	"package" : {
-		"individually" : false,
-		"exclude"      : [
+	"package": {
+		"individually": false,
+		"exclude": [
 			"swagger.spec.json",
 			"node-dependencies-*",
 			"scripts/**",

@@ -1,6 +1,6 @@
 {
-	"http-shared" : {
-		"path"   : "${httpPath}",
-		"method" : "${httpMethodLC}"
+	"http-shared": {
+		"path": "${httpPath}",
+		"method": "${httpMethodLC}"
 	}
 }

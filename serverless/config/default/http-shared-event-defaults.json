@@ -1,4 +1,4 @@
 {
-	"method"      : "get",
-	"integration" : "lambda-proxy"
+	"method": "get",
+	"integration": "lambda-proxy"
 }

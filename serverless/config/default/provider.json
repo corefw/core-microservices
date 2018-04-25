@@ -8,6 +8,7 @@
 			"SLS_DEFAULT_PROJECT": "${self:service}",
 			"SLS_DEFAULT_STAGE": "${opt:stage, 'dev'}"
 		},
+		"deploymentBucket": "tf-private-lambda-primary-deploy",
 		"role": "arn:aws:iam::277549955817:role/c2c/tf/lambda/tf-role-lambda-default-exec",
 		"vpc": {
 			"securityGroupIds": [

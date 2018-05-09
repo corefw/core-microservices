@@ -1,5 +1,5 @@
 {
-	"title": "JsonApiMeta",
+	"title": "JsonApi",
 	"type": "object",
 	"required": [
 		"version"

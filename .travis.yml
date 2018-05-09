@@ -13,24 +13,24 @@ install:
 script:
 - npm run ci:docs
 deploy:
-  - provider: npm
-    email: luke@c2cschools.com
-    skip_cleanup: true
-    api_key: $NPM_API_KEY
-    on:
-      all_branches: true
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: "developer.c2cs.io"
-    skip_cleanup: true
-    acl: public_read
-    default_text_charset: "utf-8"
-    region: "us-east-1"
-    upload-dir: "docs/source/core-microservices"
-    local_dir: "docs/html"
-    on:
-      all_branches: true
+- provider: npm
+  email: luke@c2cschools.com
+  skip_cleanup: true
+  api_key: "$NPM_API_KEY"
+  on:
+    all_branches: true
+- provider: s3
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  bucket: developer.c2cs.io
+  skip_cleanup: true
+  acl: public_read
+  default_text_charset: utf-8
+  region: us-east-1
+  upload-dir: docs/source/core-microservices
+  local_dir: docs/html
+  on:
+    all_branches: true
 env:
   global:
   # NPM_API_KEY
@@ -39,3 +39,6 @@ env:
   - secure: "FDOv/ZCtivftyQQqfgntw1fhAZBa8vmHC0govMurHEw5qzHgPgVA/Ex3susexxBxbn4/y5dAAsH+HnQ4iY2fxufoRJfp60z0CftlnuuX4EfyxCakT2q7XDz5MUYOe248odIz/YAsK2cOxIvhoIt8RyD5Z32KFueU/L3oDmt5apPFWhtdQQoPYzIYMLne6/vxp0yfUX1sxPjOMOCSDMGV5HEqlBnBGYhHmeaqNjJCLMSlIIfi45KZ21bK+YaGktvQ9uEqSZ2EBxYlWC1Ycl5vkV2Q9um1bCjldm2pgtatMIih3Jw20v6WlNKKoVpdEOr3NrZP7njnWBnLVV2opMaITbrav9TExRxj5ldulKbYrySSb/JLeBtPQJNWQ22dcCx9jnOnZNgVpVdyg8s0R5UchFcdyU5j03ZSYITG2AxYATs8yfXd10IeaM+TN75Eg2vifTKAk7nYTqHT79rmAxqOjZAH84xZTkj6UOmvJr1xDEHpNbK4TKRIv4mJu9pl8eSMoGYuwpnqlWDJuHp3/65MHAOj7WzSHCKc8JwpYcZNxOtQC1R/2CJu6YLpM1QfOx2AVSfq2r8JfS7E1LzILF0Tu5QlxnPH5c06XwBr51Pu+oNZmT+WrV/3yjPa1RJm/6ieRTKqf/xvuuf2EG1QslOKkKZF/+yoC7TdnVU1RmwM1QQ="
   # AWS_SECRET_ACCESS_KEY
   - secure: "izIEdTZD4oxvJsaS8jSc0zZbovl2uAz3paU2fs5FFXhXqd/zbHSu2CIH5BBqiHmBF8OeEtXGfPHbVQ2wRHsYXFzPoL8qyQR91kXjFcOkZkDAI7IVf7mIk9o/I3oopXRax7WFoNur5K2NTtKzFqLYFvaGhyliG1jGs6opi1LFFo102JDlJs937nisHShrBmUwDNksZj/yvhR4fXclNm8wyz92j0upSGxBYSN6XG+eJakgJXJOe0I4kzYqnNNd7WbXBj8Xj0BzXzVSXrsTU8Am5OhywPBLQh+SXv3paBP+EMkcPji2K+tuGJkOogM4zMwzHCqZt7bXCtuY05yKcWIbuif0hO9ufLVCgM79/EEHYFHqQs7EBzFLBAj/iKnFGAzK7Kys86xK6qZ1/YYcBS9LfsoTTNtXnj0MZPyNdQCSonaSUA9A8vSNkElij5w5WpGfItLjmBkC+JRKCH2lwZhdcOvDww7pzCHha29BWmAIgheuZOgS6CoHBBLofk32uenyE+PktoTf0RZjfkLnCIl8t3htE9Tn9YHUzBL5kpPabAQwjkOJue/pae+kSMXQY5mGUK0JyOziqOf5gD391FZjPVCCMrSh0P+IYePMpCFYlSik4usRoGMxkJ5cyeYhOdidAyvFfwiEbEoKXHOb3Yu3Ohc3pvhVJPN6NQRFtv2F4Is="
+notifications:
+  slack:
+    secure: lB8L57eZQw7oPQzldHH4RYNJslmgQ+djQJSYG3v82/JnpCihJSeCHj1G2WBBkecqB30b4ou4EOoOJHkT3SD6yV/CjUCcSCnGBCFSIASaHhgvvh6lh2xtBk7UTtB/0jrY+R+gyDJjpt+rXqPdSe2AWZq/upcwgU10GMtGc9JjzKfbBIJ0EzxFOH1N0FQPL/ER7k4XphUhGbbVPNJD5lmiEMlDmKftWdNDi7jv+4aQf+uNq8Lhq15BHhbzODQBZQuJO7LrV+fgVf1Pa/bjtTRvLQcJPSWb14ueIIpXYSanzbg8yy/QuJJl8/heIXWmeIyc4fR/hDQWsRgM+GIvB0T6f2LN6HA0IHciWxuPOwxndT7h7TLwEoPkYECO+W86XTA64YRhFv42JDszheiSIfueWHwRlU6Mmt0cFYNBUOf3h6Ox8eR4OQwnCm0eX7xVcKSu1IVUJp4QWzNKh5pLH9udvJ38gL+1b9hSbIbTXAEJS10R320gtdg1GmggUJDit5XhAGqvhHy5j3D5HJTnvXbSyovz2BAi+QQ8HgzV+U+op+ucp3/ubP4bPCEPMR47HSh8pNZYW8uzcN020YSvLDkiWi/AYJBbC97rWJvW6bsDm90Vr4muyxcqpDWPy/Ej/xo4ADbF/RaCcHIREYnEYHrBjl51ChH3W3FaJRTV57ODu9M=

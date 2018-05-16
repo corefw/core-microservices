@@ -11,8 +11,8 @@ module.exports = {
 	"properties": {
 		"version": {
 			"type"        : "string",
-			"description" :
-				"The highest JSON API version supported by the server.",
+			"description" : "The highest JSON API version supported by the " +
+			"server.",
 		},
 	},
 };

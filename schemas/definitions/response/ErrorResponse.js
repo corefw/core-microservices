@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = {
-	"id"          : "ErrorResponse",
+	"$id"         : "ErrorResponse",
 	"description" : "Error Response",
 	"type"        : "object",
 	"required"    : [
@@ -30,19 +30,18 @@ module.exports = {
 				"properties": {
 					"code": {
 						"type"        : "string",
-						"description" :
-							"HTTP status code applicable to this problem.",
+						"description" : "HTTP status code applicable to this " +
+						"problem.",
 					},
 					"title": {
 						"type"        : "string",
-						"description" :
-							"Short, human-readable summary of the problem.",
+						"description" : "Short, human-readable summary of " +
+						"the problem.",
 					},
 					"detail": {
 						"type"        : "string",
-						"description" :
-							"Human-readable explanation specific to this " +
-							"occurrence of the problem.",
+						"description" : "Human-readable explanation specific " +
+						"to this occurrence of the problem.",
 					},
 					"url": {
 						"type": "string",

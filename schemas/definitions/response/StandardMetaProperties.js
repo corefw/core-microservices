@@ -5,17 +5,16 @@ module.exports = {
 	"requestId": {
 		"type"        : "string",
 		"format"      : "uuid",
-		"description" : "Current Request ID (UUID)",
+		"description" : "Current Request ID (UUID).",
 	},
 	"seriesId": {
 		"type"        : "string",
 		"format"      : "uuid",
-		"description" : "Current Request Chain ID (UUID)",
+		"description" : "Current Request Chain ID (UUID).",
 	},
 	"operationId": {
 		"type"        : "string",
-		"description" :
-		"The internal name of the API endpoint that " +
+		"description" : "The internal name of the API endpoint that " +
 		"generated this response.",
 	},
 	"stage": {
@@ -28,14 +27,12 @@ module.exports = {
 		"properties" : {
 			"name": {
 				"type"        : "string",
-				"description" :
-				"The service to which this API endpoint " +
+				"description" : "The service to which this API endpoint " +
 				"belongs.",
 			},
 			"version": {
 				"type"        : "string",
-				"description" :
-				"The current version of the service and " +
+				"description" : "The current version of the service and " +
 				"endpoint source code.",
 			},
 		},

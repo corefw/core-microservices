@@ -12,16 +12,16 @@ module.exports = {
 		"service",
 		"pagination",
 	],
-	"properties": {
-		"allOf": [
-			{
-				"$ref": "common:response/StandardMetaProperties",
-			},
-			{
+	"allOf": [
+		{
+			"$ref": "common:response/StandardMetaProperties",
+		},
+		{
+			"properties": {
 				"pagination": {
 					"$ref": "common:response/Pagination",
 				},
 			},
-		],
-	},
+		},
+	],
 };

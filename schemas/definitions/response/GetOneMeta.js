@@ -11,11 +11,9 @@ module.exports = {
 		"stage",
 		"service",
 	],
-	"properties": {
-		"allOf": [
-			{
-				"$ref": "common:response/StandardMetaProperties",
-			},
-		],
-	},
+	"allOf": [
+		{
+			"$ref": "common:response/StandardMetaProperties",
+		},
+	],
 };

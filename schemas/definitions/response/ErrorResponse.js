@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = {
-	"$id"         : "ErrorResponse",
+	"$id"         : "#ErrorResponse",
 	"description" : "Error Response",
 	"type"        : "object",
 	"required"    : [

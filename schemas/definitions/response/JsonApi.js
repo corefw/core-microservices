@@ -2,6 +2,7 @@
 "use strict";
 
 module.exports = {
+	"$id"         : "#JSONAPIVersion",
 	"title"       : "JSONAPIVersion",
 	"type"        : "object",
 	"description" : "JSON API implementation information.",

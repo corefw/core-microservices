@@ -2,7 +2,8 @@
 "use strict";
 
 module.exports = {
-	"title"    : "MetaData",
+	"$id"      : "#GetManyMeta",
+	"title"    : "GetManyMeta",
 	"type"     : "object",
 	"required" : [
 		"requestId",

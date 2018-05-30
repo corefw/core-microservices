@@ -2,8 +2,8 @@
 "use strict";
 
 module.exports = {
-	"$id"      : "#ErrorMeta",
-	"title"    : "ErrorMeta",
+	"$id"      : "#DeleteOneMeta",
+	"title"    : "DeleteOneMeta",
 	"type"     : "object",
 	"required" : [
 		"requestId",

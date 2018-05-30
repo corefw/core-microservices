@@ -2,6 +2,7 @@
 "use strict";
 
 module.exports = {
+	"$id"        : "#Pagination",
 	"title"      : "Pagination",
 	"type"       : "object",
 	"properties" : {

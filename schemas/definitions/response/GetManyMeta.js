@@ -2,7 +2,8 @@
 "use strict";
 
 module.exports = {
-	"title"    : "MetaData",
+	"$id"      : "#GetManyMeta",
+	"title"    : "GetManyMeta",
 	"type"     : "object",
 	"required" : [
 		"requestId",
@@ -12,16 +13,16 @@ module.exports = {
 		"service",
 		"pagination",
 	],
-	"properties": {
-		"allOf": [
-			{
-				"$ref": "common:response/StandardMetaProperties",
-			},
-			{
+	"allOf": [
+		{
+			"$ref": "common:response/StandardMetaProperties",
+		},
+		{
+			"properties": {
 				"pagination": {
 					"$ref": "common:response/Pagination",
 				},
 			},
-		],
-	},
+		},
+	],
 };

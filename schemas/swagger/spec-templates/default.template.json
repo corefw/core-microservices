@@ -1,5 +1,5 @@
 {
-	"swagger": "2.0",
+	"openapi": "3.0.1",
 	"info": {
 		"version": {
 			"$ref": "service:Package#/version"
@@ -16,16 +16,10 @@
 			"name": "EULA"
 		}
 	},
-	"host": "api.c2cs.io",
-	"basePath": "/",
-	"schemes": [
-		"http"
-	],
-	"consumes": [
-		"application/vnd.api+json"
-	],
-	"produces": [
-		"application/vnd.api+json"
+	"servers": [
+		{
+			"url": "http://api.c2cs.io"
+		}
 	],
 	"paths": {
 		"$ref": "service:EndpointPaths"

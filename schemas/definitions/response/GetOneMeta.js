@@ -2,7 +2,8 @@
 "use strict";
 
 module.exports = {
-	"title"    : "MetaData",
+	"$id"      : "#GetOneMeta",
+	"title"    : "GetOneMeta",
 	"type"     : "object",
 	"required" : [
 		"requestId",
@@ -11,11 +12,9 @@ module.exports = {
 		"stage",
 		"service",
 	],
-	"properties": {
-		"allOf": [
-			{
-				"$ref": "common:response/StandardMetaProperties",
-			},
-		],
-	},
+	"allOf": [
+		{
+			"$ref": "common:response/StandardMetaProperties",
+		},
+	],
 };

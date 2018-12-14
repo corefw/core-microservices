@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  version:
+    $ref: service:Package#/version
+  title:
+    $ref: service:Package#/name
+  description: Part of the C2C API.
+  termsOfService: ""
+  contact:
+    $ref: service:Package#/author
+  license:
+    name: EULA
+servers:
+  - url: http://api.c2cs.io
+paths:
+  $ref: service:EndpointPaths

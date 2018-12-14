@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.9",
+  "version": "5.1.10",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
@@ -21,11 +21,12 @@
   "homepage": "https://github.com/corefw/core-microservices#readme",
   "main": "index.js",
   "dependencies": {
-    "@corefw/common": "^5.0.0",
+    "@corefw/common": "^5.1.11",
     "bluebird": "^3.4.6",
     "deep-diff": "^1.0.0",
     "eyes": "^0.1.8",
     "json-schema-ref-parser": "^4.0.4",
+    "json-schema-to-openapi-schema": "^0.2.0",
     "require-from-string": "^2.0.1",
     "requireindex": "^1.1.0",
     "tipe": "^0.1.12"
@@ -35,7 +36,7 @@
     "@lukechavers/jsdoc": "^0.1.7",
     "chai": "^4.1.2",
     "jsdoc": "3.4.0",
-    "mocha": "^3.2.0"
+    "mocha": "^5.2.0"
   },
   "//devDependencies": {},
   "scripts": {

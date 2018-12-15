@@ -1,0 +1,5 @@
+plugins:
+  #- serverless-plugin-log-subscription
+  #- serverless-offline
+  # FIXME: if this is a dev dependency, can we really make it part of the global config for serverless?,
+  #- @c2cs/serverless-apigateway-plugin

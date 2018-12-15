@@ -8,9 +8,9 @@ required:
   - errors
 properties:
   jsonapi:
-    $ref: common:response/JsonApi
+    $ref: common:/response/JsonApi
   meta:
-    $ref: common:response/ErrorMeta
+    $ref: common:/response/ErrorMeta
   errors:
     type: array
     items:

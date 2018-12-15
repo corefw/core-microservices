@@ -8,4 +8,4 @@ required:
   - stage
   - service
 allOf:
-  - $ref: common:response/StandardMetaProperties
+  - $ref: common:/response/StandardMetaProperties

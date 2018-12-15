@@ -1,0 +1,5 @@
+custom:
+  logSubscription:
+    enabled: true
+    destinationArn: arn:aws:kinesis:us-east-1:277549955817:stream/tf-cloudwatch-logs
+    roleArn: arn:aws:iam::277549955817:role/tf/logging/tf-role-cw-to-kinesis

@@ -4,7 +4,8 @@ info:
     $ref: service:Package#/version
   title:
     $ref: service:Package#/name
-  description: Part of the C2C API.
+  description: >-
+    Part of the C2C API.
   termsOfService: ""
   contact:
     $ref: service:Package#/author

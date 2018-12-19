@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.15",
+  "version": "5.1.16",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@lukechavers/jsdoc": "^0.1.7",
     "chai": "^4.1.2",
-    "jsdoc": "3.4.0",
+    "jsdoc": "^3.5.5",
     "mocha": "^5.2.0"
   },
   "//devDependencies": {},

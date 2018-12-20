@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.16",
+  "version": "5.1.17",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Theodor Shaytanov <brainenjii@gmail.com>",
@@ -27,7 +27,6 @@
     "eyes": "^0.1.8",
     "json-schema-ref-parser": "^4.0.4",
     "json-schema-to-openapi-schema": "^0.2.0",
-    "require-from-string": "^2.0.1",
     "requireindex": "^1.1.0",
     "tipe": "^0.1.12"
   },

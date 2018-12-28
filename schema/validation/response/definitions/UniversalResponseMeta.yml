@@ -20,7 +20,7 @@ properties:
     type: string
     description: >-
       The API environment name.
-    pattern: ^[a-zA-Z0-9]+$
+    pattern: ^[a-zA-Z0-9-]+$
     minLength: 2
     maxLength: 40
   service:

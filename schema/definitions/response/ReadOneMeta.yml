@@ -1,5 +1,5 @@
-$id: "#GetOneMeta"
-title: GetOneMeta
+$id: "#ReadOneMeta"
+title: ReadOneMeta
 type: object
 required:
   - requestId

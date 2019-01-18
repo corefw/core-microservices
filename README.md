@@ -1,7 +1,7 @@
 core-microservices
 ===========
 
-[![Build Status](https://travis-ci.org/corefw/core-microservices.svg?branch=master)](https://travis-ci.org/corefw/core-microservices)
+[![Build Status](https://travis-ci.com/corefw/core-microservices.svg?branch=master)](https://travis-ci.com/corefw/core-microservices)
 
 Classes and utilities related to microservice endpoints.
 
@@ -24,7 +24,7 @@ Coming Soon...
 
 
 
-[travis-link]:        https://travis-ci.org/corefw/core-microservices
+[travis-link]:        https://travis-ci.com/corefw/core-microservices
 [github-link]:        https://github.com/corefw/core-microservices
 
 [core-common]:        https://github.com/corefw/core-common

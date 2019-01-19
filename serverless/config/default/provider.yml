@@ -1,11 +1,17 @@
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'us-east-1'}
+  stage: "${gitBranch}"
+  region: us-east-1
+  stackName: "sls-cf-${gitBranch}-${serviceNameShort}"
+  apiName: "sls-${gitBranch}-${serviceNameShort}"
+  logRetentionInDays: 30
+  stackTags:
+    COREFW_SERVICE_NAME: "${serviceName}"
+    COREFW_SERVICE_SHORT: "${serviceNameShort}"
+    COREFW_SERVICE_BRANCH: "${gitBranch}"
   environment:
-    SLS_DEFAULT_PROJECT: ${self:service}
-    SLS_DEFAULT_STAGE: ${self:provider.stage}
+    COREFW_IS_SERVICE: "yes"
   deploymentBucket: tf-private-lambda-primary-deploy
   role: arn:aws:iam::277549955817:role/c2c/tf/lambda/tf-role-lambda-default-exec
   vpc:

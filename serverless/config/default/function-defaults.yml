@@ -1,4 +1,20 @@
+name: "sls-${gitBranch}-${serviceNameShort}-${endpointName}"
 handler: ${endpointRootRel}/index.handler
 timeout: 20
 memorySize: 256
+description: "[${gitBranch}] ${serviceName}::${endpointName} (v${versionFull})"
+environment:
+  COREFW_SERVICE_NAME: "${serviceName}"
+  COREFW_SERVICE_SHORT: "${serviceNameShort}"
+  COREFW_SERVICE_BRANCH: "${gitBranch}"
+  COREFW_SERVICE_VERSION: "${versionFull}"
+  COREFW_ENDPOINT_NAME: "${endpointName}"
+  COREFW_VERSION_HASH: "${endpointVersionHash}"
+tags:
+  COREFW_SERVICE_NAME: "${serviceName}"
+  COREFW_SERVICE_SHORT: "${serviceNameShort}"
+  COREFW_SERVICE_BRANCH: "${gitBranch}"
+  COREFW_SERVICE_VERSION: "${versionFull}"
+  COREFW_ENDPOINT_NAME: "${endpointName}"
+  COREFW_VERSION_HASH: "${endpointVersionHash}"
 events: []

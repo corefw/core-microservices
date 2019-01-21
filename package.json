@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.36",
+  "version": "5.1.37",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Luke Chavers <luke@c2cschools.com>",
@@ -36,14 +36,19 @@
     "@lukechavers/jsdoc": "^0.1.7",
     "chai": "^4.1.2",
     "jsdoc": "^3.5.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "@corefw/eslint-config": "^1.0.6",
+    "eslint": "^5.12.0"
   },
   "//devDependencies": {},
   "scripts": {
     "ci:docs": "./scripts/docs/build-docs-ci.sh",
     "docs": "./scripts/docs/build-docs-local.sh",
     "browser-sync": "./scripts/pm2/browser-sync/do-pm2-action.sh",
-    "build-docs": "./scripts/pm2/build-docs/do-pm2-action.sh"
+    "build-docs": "./scripts/pm2/build-docs/do-pm2-action.sh",
+    "lint": "eslint . --ext .json --ext .js",
+    "pretest": "npm run lint",
+    "test": "echo \"No tests\""
   },
   "//scripts": {
     "depr-docswait": "./scripts/docs/build-docs-then-wait.sh",

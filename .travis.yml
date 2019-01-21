@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '8'
+  - 8
 branches:
   only:
     - master
@@ -11,7 +11,7 @@ install:
 #- yarn --version
 #- yarn install --non-interactive
 script:
-  - npm run ci:docs
+  - npm test && npm run ci:docs
 deploy:
   - provider: npm
     email: luke@c2cschools.com

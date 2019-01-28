@@ -46,7 +46,7 @@
     "docs": "./scripts/docs/build-docs-local.sh",
     "browser-sync": "./scripts/pm2/browser-sync/do-pm2-action.sh",
     "build-docs": "./scripts/pm2/build-docs/do-pm2-action.sh",
-    "lint": "eslint . --ext .json --ext .js",
+	"lint": "eslint . --ext .json,.js,.md",
     "pretest": "npm run lint",
     "test": "echo \"No tests\""
   },

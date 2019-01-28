@@ -24,7 +24,7 @@ bs.init( {
 	files: [
 		{
 			match : [ "./docs/html/latest/**/*" ],
-			fn    : function ( event, file ) {
+			fn    : function () {
 
 				this.reload();
 			},

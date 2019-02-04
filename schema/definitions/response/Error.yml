@@ -1,0 +1,28 @@
+$id: "#Error"
+title: Error
+type: object
+required:
+  - code
+  - title
+  - detail
+  - url
+properties:
+  code:
+#    oneOf:
+#      - type: string
+#      - type: integer
+    type: string # FIXME: causes validation failure (string vs number)
+    description: >-
+      HTTP status code applicable to this problem.
+  title:
+    type: string
+    description: >-
+      Short, human-readable summary of the problem.
+  detail:
+    type: string
+    description: >-
+      Human-readable explanation specific to this occurrence of the problem.
+  url:
+    type: string
+    description: >-
+      URL containing more information about this particular error.

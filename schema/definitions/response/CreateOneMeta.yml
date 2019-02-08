@@ -1,7 +1,7 @@
-$id: "#ErrorMeta"
-title: ErrorMeta
+$id: "#CreateOneMeta"
+title: CreateOneMeta
 type: object
-description: Error response metadata.
+description: Success response metadata.
 required:
   - requestId
   - seriesId

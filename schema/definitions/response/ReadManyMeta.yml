@@ -1,6 +1,7 @@
 $id: "#ReadManyMeta"
 title: ReadManyMeta
 type: object
+description: Success response metadata.
 required:
   - requestId
   - seriesId

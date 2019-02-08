@@ -1,0 +1,26 @@
+#
+# JSON:API Specification 1.0
+# https://jsonapi.org/format/#document-meta
+#
+# Meta Object
+# ------------------------------------------------------------------------------
+# A meta object containing non-standard meta-information about a resource that
+# can not be represented as an attribute or relationship.
+#
+
+$id: "#StandardResourceMeta"
+title: StandardResourceMeta
+type: object
+description: >-
+  Standard resource metadata.
+properties:
+  createdDateTime:
+    type: string
+    format: date-time
+    description: >-
+      Date & time (UTC) that the resource was created.
+  updatedDateTime:
+    type: string
+    format: date-time
+    description: >-
+      Date & time (UTC) that the resource as last updated.

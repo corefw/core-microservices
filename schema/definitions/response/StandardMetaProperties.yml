@@ -22,6 +22,8 @@ properties:
       The API environment name.
   service:
     title: ServiceInformationMeta
+    description: >-
+      Service information metadata.
     type: object
     properties:
       name:

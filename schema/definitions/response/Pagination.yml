@@ -1,6 +1,8 @@
 $id: "#Pagination"
 title: Pagination
 type: object
+description: >-
+  Pagination information.
 properties:
   allRecordsReturned:
     type: boolean

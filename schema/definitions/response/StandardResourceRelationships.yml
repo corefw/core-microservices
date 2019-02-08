@@ -1,0 +1,60 @@
+#
+# JSON:API Specification 1.0
+# https://jsonapi.org/format/#document-resource-object-attributes
+#
+# Relationships Object
+# ----------------------------------------------------------------------------------------------------------------------
+# A relationships object describing relationships between the resource and
+# other JSON:API resources.
+#
+
+$id: "#StandardRelationships"
+title: StandardRelationships
+type: object
+description: >-
+  Standard resource relationships.
+properties:
+  createdBy:
+    type: object
+    description: User relationship.
+    required:
+      - data
+    properties:
+      data:
+        type: object
+        description: Resource linkage.
+        required:
+          - id
+          - type
+        properties:
+          id:
+            type: string
+            format: uuid
+            description: Resource ID.
+          type:
+            type: string
+            enum:
+              - User
+            description: Resource type.
+  updatedBy:
+    type: object
+    description: User relationship.
+    required:
+      - data
+    properties:
+      data:
+        type: object
+        description: Resource linkage.
+        required:
+          - id
+          - type
+        properties:
+          id:
+            type: string
+            format: uuid
+            description: Resource ID.
+          type:
+            type: string
+            enum:
+              - User
+            description: Resource type.

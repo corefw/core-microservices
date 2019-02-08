@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "5.1.38",
+  "version": "6.0.0",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Luke Chavers <luke@c2cschools.com>",
@@ -21,8 +21,8 @@
   "homepage": "https://github.com/corefw/core-microservices#readme",
   "main": "index.js",
   "dependencies": {
-    "@corefw/common": "^5.1.30",
-    "@corefw/model": "^5.0.27",
+    "@corefw/common": "^6.0.0",
+    "@corefw/model": "^6.0.0",
     "bluebird": "^3.4.6",
     "deep-diff": "^1.0.0",
     "eyes": "^0.1.8",
@@ -37,7 +37,7 @@
     "chai": "^4.1.2",
     "jsdoc": "^3.5.5",
     "mocha": "^5.2.0",
-    "@corefw/eslint-config": "^1.0.6",
+    "@corefw/eslint-config": "^1.0.11",
     "eslint": "^5.12.0"
   },
   "//devDependencies": {},

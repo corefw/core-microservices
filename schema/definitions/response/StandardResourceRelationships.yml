@@ -16,7 +16,7 @@ description: >-
 properties:
   createdBy:
     type: object
-    description: User relationship.
+    description: User that created this resource.
     required:
       - data
     properties:
@@ -38,7 +38,7 @@ properties:
             description: Resource type.
   updatedBy:
     type: object
-    description: User relationship.
+    description: User that last updated this resource.
     required:
       - data
     properties:

@@ -1,6 +1,6 @@
 {
   "name": "@corefw/microservices",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "Classes and utilities related to microservice endpoints.",
   "license": "MIT",
   "author": "Luke Chavers <luke@c2cschools.com>",
